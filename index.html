@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <link href="style.css"> -->
+    <style>
+        table{border: 1px solid black;/*테두리1줄로*/
+                border-collapse: collapse;}
+        th {border: 1px solid black;
+            padding: 0px;/*여백없애기*/}
+        img{vertical-align: bottom;}/**이미지하단여백정리*/
+        a,a:visited{
+            color: hotpink;
+            text-decoration: none;
+            font-size: 20px;
+            font-family:휴먼모음T;}
+        a:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.ds.ac.kr" target="_blank">덕성여대</a>
+    <a href="http://www.naver.com" target="_blank">네이버</a>
+    <a href="http://www.daum.net" target="_blank">다음넷</a>
+    
+    <a href=#bott> 아래로 </a>
+    <a name="top"></a><br><br>
+
+    <a href="form1.html">폼연습1</a>
+    <a href="form2.html">폼연습2</a><br><br>
+    <h1> My favorite</h1>
+        <ol type="I" start="3">
+            <li>music</li>
+            <li>musical</li>
+            <li>YubDDEok</li>
+            <li>play</li>
+        </ol>
+        
+    <h1>I want...</want></h1>
+        <ul type="square">
+            <li>music</li>
+            <li>musical</li>
+            <li>YubDDEok</li>
+            <li>play</li>
+        </ul>
+    
+    <dl>
+        <dt>4 Seasons</dt>
+        <dd>봄</dd>
+        <dd>여름</dd>
+        <dd>가을</dd>
+        <dd>겨울</dd>
+    </dl>
+
+    <table border="1">
+        <caption>1-9 숫자 테이블</caption>
+        <!-- 1행 -->
+        <!-- <thead> -->
+            <tr>
+                <th width="100" height="100" rowspan="2">1</th>
+                <th width="100" height="100" colspan="2" ><a href="http://www.ds.ac.kr" target="_blank"><img src="flowers.jpg" alt="꽃사진" width="201" height="100"></a></th>
+                <!-- <th width="100" height="100" >3</th> -->
+            </tr>
+        <!-- </thead> -->
+        <!-- <tbody> -->
+            <tr>
+                <!-- 2행 -->
+                <!-- <th width="100" height="100">4</th> -->
+                <th width="100" height="100" ><a href="http://www.ds.ac.kr" target="_blank"><img src="market.jpg" alt="마켓컬리로고" width="100" height="100"></a></th>
+                <th width="100" height="100">6</th>
+            </tr>
+        <!-- </tbody> -->
+        <!-- <tfoot> -->
+            <tr>
+                <!-- 3행 -->
+                <th width="100" height="100">7</th>
+                <th width="100" height="100">8</th>
+                <th width="100" height="100">9</th>
+            </tr>
+        <!-- </tfoot> -->
+    </table>
+    <img src="flowers.jpg" alt="꽃그림" usemap="#sp1">
+    <map name="sp1">
+    <area shape="rect" coords="76,68,148,124" href="http://www.ds.ac.kr" target="_blank">
+    <area shape="rect" coords="0,20,50,60" href="http://www.naver.com" target="_blank">
+
+    
+    </map><br>
+
+    <p></p>
+    <object data="ptest.pdf" width="400" height="500"></object>
+    <object data="bgsound.mp3"></object>
+    <object data="fire.mp4" width="300" height="300"></object>
+    <p></p>
+    <embed src="ptest.pdf" width="400" height="500">
+    <embed src="bgsound.mp3">
+    <embed src="fire.mp4">
+
+    <p></p>
+    <audio src="bgsound.mp3" controls autoplay></audio>
+    <p></p>
+    <video src="fire.mp4" controls autoplay muted loop></video>
+    
+    <a name="bott">아래입니다</a><br>
+    <a href=#top>처음으로</a>
+</body>
+</html>
