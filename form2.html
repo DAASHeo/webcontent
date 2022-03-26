@@ -5,8 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        li{
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        fieldset{
+            border: 2px dotted;
+            background-color: beige;
+        }
+        legend{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        body{
+            margin: 50px 100px 0px 100px;
+        }
+    </style>
 </head>
 <body>
-    
+    <form method="get" action="form1.html">
+        <fieldset>
+            <legend>PROFILE</legend>
+            <ul>
+                <li>
+                    <label>Name : <input type="text" required name="na1"></label>
+                </li>
+
+                <li>
+                    <label>PWD : <input type="password" placeholder="비밀번호" name="pw1"></label>
+                </li>
+
+                <li>
+                    <label>Email : <input type="email" name="em1"></label>
+                </li>
+
+                <li>
+                    Bloodtype : 
+                    <label>A형<input type="radio" name="bloodtype" value="A"></label>
+                    <label>B형<input type="radio" name="bloodtype" value="B"></label>
+                    <label>O형<input type="radio" name="bloodtype" value="O"></label>
+                    <label>AB형<input type="radio" name="bloodtype" value="AB"></label>
+                </li><br>
+
+                <li>좋아하는 음식:
+                    <label>한식<input type="checkbox" name="food" value="kr"></label>
+                    <label>중식<input type="checkbox" name="food" value="ch"></label>
+                    <label>분식<input type="checkbox" name="food" value="bs"></label>
+                    <label>일식<input type="checkbox" name="food" value="jp"></label><br><br>
+                </li>
+
+            </ul>
+
+            <input type="reset" value="취소">
+            <input type="submit" value="전송">
+            <input type="image" src="flowers.jpg" width="100" height="30">
+            <input type="button" value="공지사항" onclick="window.open('flowers.jpg')">
+            <input type="file"><br><br>
+            <input type="hidden" name="hd1" value="test">
+            <textarea cols="30" rows="10" name="txt"></textarea><br><br>
+            <select name="subject" multiple size="3">
+                <option value="kr">국어</option>
+                <option value="en">영어</option>
+                <option value="mt">수학</option>
+            </select>
+        </fieldset>
+        
+    </form>
 </body>
 </html>

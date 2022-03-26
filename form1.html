@@ -9,21 +9,62 @@
         body{
             margin: 50px 50px 0px 50px;
         }
+        fieldset{
+            border: 2px solid purple;
+            background: url('market.jpg');
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input{
+            border: 1px solid rgb(65, 64, 64);
+        }
     </style>
 </head>
 <body>
     <form>
         <fieldset>
             <legend>Profile</legend>
-            <label>이름 : <input type="text" placeholder="한글5자이내입력" size="200"> </label><br>
-            <label for="pd">비밀번호 : </label>
-            <input type="password" id="pw" maxlength="5"><br> 
+            <label>이름 : <input type="text" placeholder="이덕성" size="200"> </label><br><br> 
+            <label for="pw">비밀번호 : </label>
+            <input type="password" id="pw" maxlength="5" required><br><br>  
             <!-- input -> password 점으로 표현, text-> 텍스트로 표현  -->
-            <label>검색: <input type="search"></label><br>
-            <label>이메일: <input type="email"></label><br>
-            <label>URL: <input type="url"></label><br>
-            <label>전화번호: <input type="tel"></label>
+            <!-- for랑 id 연결하는 거 시험으로 내실 예정-->
+            <label>검색: <input type="search" autofocus></label><br><br> 
+            <label>이메일: <input type="email"></label><br><br> 
+            <label>URL: <input type="url"></label><br><br> 
+            <label>전화번호: <input type="tel" readonly value="010-1111-1111"></label><br><br>  
+            학년 :
+            <label>1학년<input type="radio" name="grade" value="g1"></label>
+            <label>2학년<input type="radio" name="grade" value="g2"></label>
+            <label>3학년<input type="radio" name="grade" value="g3" checked></label>
+            <label>4학년<input type="radio" name="grade" value="g4"></label><br><br>
+
+            좋아하는 음식:
+            <label>한식<input type="checkbox" name="food" value="kr" checked></label>
+            <label>중식<input type="checkbox" name="food" value="ch"></label>
+            <label>분식<input type="checkbox" name="food" value="bs"></label>
+            <label>일식<input type="checkbox" name="food" value="jp"></label><br><br>
+
+            <label>점수1 : <input type="number" min="1" max="10" step="2" value="5"></label><br><br>
+            <label>점수2 : <input type="range" min="1" max="10" step="2" value="5"></label><br><br>
+
+            <input type="date">
+            <input type="month">
+            <input type="week"><br><br>
+            <input type="time">
+            <input type="datetime-local">
+            <input type="datetime">
         </fieldset>
     </form>
+    <br><br>
+    <button><a href="index.html">홈으로 가기</a></button>
 </body>
 </html>
+
+<!--autofocus 자동으로 커서 생성-->
+<!--required 필수로 채워야 실행 가능-->
+<!--readonly value "" 수정 안되고 진짜 박혀있음-->
+<!--input type = "radio"-->
+<!--radio와 checkbox의 차이점(다중 선택 불가능 - 가능)-->
+<!--checked -> 기본으로 체크되어있음, value에는 어떤 값을 전달해줄지 값 정해주고, 
+    name은 만든것들 묶어주기-->
