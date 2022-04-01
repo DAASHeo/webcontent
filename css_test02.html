@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="test02.css">
+    <style>
+        * {margin : 3}
+        .c1 {
+            color: blueviolet !important
+        }
+        /* !important가 제일 우선시 여겨짐 */
+        .c2 {
+            background-color: blanchedalmond;
+        }
+        h1,h2 {
+            font-family: 휴먼모음T;
+        }
+        /* 마지막에 작성한 스타일이 적용된다 */
+        div b {
+            color: cornflowerblue; font-size: 30px;
+        }
+        #layout1{
+            color: cadetblue;
+            width: 300px;
+            height: 100px;
+            border: 2px solid red;
+            border-radius: 20px;
+            display: flex;
+            align-items: center; 
+            justify-content: center;/*display~justify -> 정가운데*/
+            position: absolute;/*position ~ transform 정중앙 배치*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <img src="flowers.jpg" width="300px" height="300px">
+    <h1 style="color: brown; font-size: 100px;">덕성여대1</h1><!--인라인스타일-->
+    <h2>덕성여대2</h2>
+    <div id="layout1">덕성여대3</div>
+    <!-- <div class="c1 c2">덕성여대4</div> -->
+    <!--div : 글자 존재하는 줄 전체-->>
+    <span style="color: gold;" class="c1">덕성여대4-1</span>
+    <!-- span : 글자까지만, 인라인의 스타일이 우선시 여겨짐 -->
+    <div><p><b>덕성여대5</b></p></div>
+</body>
+</html>
