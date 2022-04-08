@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background: url("p1.jpeg");
+            background-size: cover; /*비율이 깨지지않으면서 배경이 채워짐*/
+        }
+        .box1{
+            position: absolute; /*무조건 절대적인, reletive 상대적*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /*전체 창에서 가운데에 삽입하기*/
+        }
+        .c1{
+            font-size: 4em;
+            font-family: Impact;
+            color: rgb(239, 219, 0);
+            text-shadow: 5px 5px black;
+            -webkit-text-stroke: 1.5px black;
+            letter-spacing: 0.1em;
+        }
+        ol {
+            list-style: none;
+        }
+        li{
+            border: 1.5px dotted black;
+            border-radius: 0.5em;
+            padding: 20px 40px;
+            margin: 5px;
+            background: linear-gradient(to bottom right,rgba(0, 0, 255, 0.39), hsla(278, 91%, 27%, 0.39));
+        }
+        nav{
+            margin-top: 50px;
+            margin-left: 30px;
+            width: 300px;
+        }
+        table{
+            border: 1px solid whitesmoke;
+            caption-side: bottom;
+            border-spacing: 10px;
+            color: white;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid whitesmoke;
+            padding: 30px 30px;
+            background: linear-gradient(to bottom right,rgba(0, 0, 255, 0.39), hsla(278, 91%, 27%, 0.39));
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 c1">WEB DESIGN</div>
+    <nav>
+    <h3>2022-1 수강과목</h3>
+    <ol>
+        <li>웹콘텐츠 제작</li>
+        <li>머신비전</li>
+        <li>프로그래밍개론</li>
+        <li>XR프로그래밍</li>
+        <li>인간 컴퓨터 상호작요</li>
+    </ol>
+    </nav>
+    <table>
+        <caption>table practice</caption>
+        <tr>
+            <td>1111</td>
+            <td>555555</td>
+            <td>111134423424</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1111</td>
+            <td>555555</td>
+            <td>111134423424</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1111</td>
+            <td>555555</td>
+            <td>111134423424</td>
+            <td>1</td>
+        </tr>
+    </table>
+</body>
+</html>
