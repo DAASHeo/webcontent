@@ -35,6 +35,11 @@
             box-sizing: content-box; /*콘텐트만 200 * 100 */
             box-shadow: 5px 5px 10px 5px gray; /*좌우 상하 흐림 번짐 inset:내부로 그림자*/
             border-radius: 20px;
+            margin: 10px auto;
+            
+            text-align: center;
+            line-height: 100px; 
+            /*박스안 한줄짜리 글씨 정중앙에 오게하는 법 line-height는 heigth랑 같은 값으로*/
         }
         .box4{
             width: 200px; height: 100px; background-color: black;
@@ -48,10 +53,77 @@
             justify-content: center;
             display: flex;
             font-family: Impact;
+            margin-top: 20px;
+        }
+        .box5{
+            width: 250px; height: 250px; 
+            border:3px solid cornflowerblue; 
+            /* border-top-left-radius: 20px;
+            border-top-right-radius: 20px; */
+            border-radius: 50%;
+            background: url("p1.jpeg");
+            box-shadow: 10px 10px 10px gray;
+            margin: 50px auto; /*auto를 통해 좌우에서 중심에 오게된다(auto쓸때 width설정 필수임)*/
+        }
+        .img1{
+            width: 250px; height: 250px; 
+            border:3px solid cornflowerblue; 
+            border-radius: 50%;
+            margin-top: 20px;
+            box-shadow: 10px 10px 10px gray;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        #list{
+            width: 800px; 
+            margin: 10px auto;
+        }
+        ul li {
+            display: inline-block;
+            border: 2px solid cornflowerblue;
+            width: 100px; height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin: 10px 5px;
+            border-radius: 15px;
+            letter-spacing: 0.2em;
+        }/* ul > li 자식 (ul밑에 바로있는 li)
+            ul li 후손(ul밑에 있는 모든 li)*/
+        ol{
+            border-top: 2px solid rgb(141, 100, 237);
+            border-bottom: 2px solid rgb(141, 100, 237);
+            padding: 0;
+            text-align: center;
+        }
+        ol li{
+            display: inline-block;
+            width: 100px; height: 30px;
+            text-align: center;
+            line-height: 30px;
+            letter-spacing: 0.2em;
+            margin: 5px 5px;
         }
     </style>
 </head>
 <body>
+    <div id="list">
+        <ul>
+            <li>Intro</li>
+            <li>Profile</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul> 
+
+        <ol>
+            <li>Intro</li>
+            <li>Profile</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ol> 
+    </div>
     <div class="bloc">블록요소</div>
     <!--블록은 크기(width, height) 설정 가능-->
     <span class="inline">인라인요소</span><span class="inline">인라인요소</span>
@@ -62,5 +134,7 @@
     <div class="box2">박스2</div>
     <div class="box3">박스3</div>
     <div class="box4">BOX4</div>
+    <div class="box5">BOX5</div> <!--div로 생성된 곳에 삽입하면 사진의 일부분이 나타나지만-->
+    <img src="p1.jpeg" class="img1"> <!--이미지로 삽입하면 사진의 모든 부분이 나타남-->
 </body>
 </html>
