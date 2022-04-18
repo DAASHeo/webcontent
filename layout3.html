@@ -7,20 +7,44 @@
         .st{
             width: 100px; height: 100px;
             border: 1px solid black;
+            position: static;
         }
         .r1{
             width: 100px; height: 100px;
             border: 1px solid black;
+            position: relative;
+            top: 100px; left: 100px;
+            /*원래 위치 기준에서 위->아래로 100이동 왼->오로 100*/
         }
         .r2{
             width: 100px; height: 100px;
-            border: 1px solid black;
+            border: 2px solid coral;
+            position: relative;
+            /*top: 100px; left: 100px;
+            위의 것에 영향 받지않고 원래 위치 기준에서 위->아래로 100이동 왼->오로 100*/
         }
+        .abs{
+            width: 100px; height: 100px;
+            border: 2px solid coral;
+            position: absolute;
+            top: 100px; left: 100px;
+            /*부모가 없으면 body 첫부분을 기준으로 이동함*/
+        }
+        .fixed{
+            width: 100px; height: 100px;
+            border: 2px solid cornflowerblue;
+            position: fixed;
+            top: 50px; right: 50px;
+            /*스크롤내릴때 그대로 떠다님(고정)*/
+        }
+        /*position : static 문서에 흐름에 따라 들어감. 1개 들어가고 그 다음에 들어가고*/
     </style>
 </head>
 <body>
     <div class="st">static</div>
     <div class="r1">relative1</div>
     <div class="r2">relative2</div>
+    <div class="abs">absolute</div>
+    <div class="fixed">fixed</div>
 </body>
 </html>
