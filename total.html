@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Total</title>
+    <!-- <link rel="stylesheet" href="css">  -->
+    <!--css 파일 링크-->
+</head>
+<body>
+    <h1>제목</h1>
+    <p>문단</p>
+    <br>줄바꿈<br>
+    <blockquote>인용 내용 :  다른 텍스트보다 들여써짐</blockquote>
+    <strong>strong : 중요내용 강조</strong> <br>
+    <b>b : 단순하게 굵은 글씨로 표현</b><br>
+    <em>em : 흐름상 특정 부분 기울여서 강조</em><br>
+    <i>i :단순하게 기울이고 싶을때</i><br>
+    <ol type="1" start="2">
+        <li>ol : 순서 표시 O 목록 제작</li>
+        <li>type으로 앞머리 종류 선택 가능</li>
+        <li>start로 몇번부터 매길건지 선택 가능</li>
+    </ol>
+    <ul>
+        <li>ul : 순서 표시 X 목록 제작</li>
+    </ul>
+    <dl>
+        <dt>dt : 이름(제목) 1</dt>
+            <dd>dd : 값(설명) 1</dd>
+            <dd>하나의 dt에 여러개의 dd값</dd>
+    </dl>
+    <table border="1px">
+        <caption>caption : 표 제목</caption>
+        <thead>
+            <tr>
+                <th width = "50" height = "50">tr</th>
+                <th width = "50" height = "50">th</th>
+                <th width = "50" height = "50">td</th>
+                <th width = "50" height = "50" >rowspan</th>
+                <th width = "50" height = "50">colspan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td width = "50" height = "50" rowspan="2">행을 의미</td>
+                <td width = "50" height = "50" rowspan="2">제목 셀</td>
+                <td width = "50" height = "50" rowspan="2">내용 셀</td>
+                <td width = "50" height = "50">위아래 합침</td>
+                <td width = "50" height = "50">좌우 합침</td>
+            </tr>
+            <tr>
+                <td width = "50" height = "50" colspan="2">.</td>
+            </tr>
+        </tbody>
+    </table>
+    <img src="p1.jpeg" alt="이미지에 대한 설명">
+    <a href="http://www.ds.ac.kr" target="_blank">target="_blank"로 설정하면 새탭으로 열림</a>
+    <object data="ptest.pdf">object를 통해 pdf, 오디오 등의 파일 삽입 가능</object>
+    <form>
+        <h4>fieldset : 폼 요소를 그룹으로 묶어줌</h4>
+        <fieldset>
+            <legend>legend : 필드의 제목</legend>
+            <ul>
+                <li>
+                    <label>label : 요소앞에 제목<input type="text" name="na1"></label>
+                </li>
+                <li>
+                    <label for="name">label 과 input 따로입력해줘야할때는 for-id를 같은값주기</label>
+                    <input id="name" type="text" name="na1">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
