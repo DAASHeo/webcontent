@@ -12,9 +12,15 @@
             margin: 5px;
             padding: 10px;
         }
+        header{
+            width: 800px;
+            height: 30px;
+            margin:0 auto;
+        }
         section{
             width: 800px;
             margin: 0 auto;
+            clear: left;
         }
         footer{
             clear: left;
@@ -37,9 +43,46 @@
             justify-content: center;
             /*display~justify 좌우 정렬*/
         }
+        ul{
+            list-style-type: none;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding: 0%; /*ul은 항상 패딩값 40이 잡혀있음 그러므로 초기화*/
+            }
+        ul li {
+            float: left;
+            /* display: inline-block; */
+            margin: 5px;
+        }
+        ul a:link, a:visited{
+            text-decoration: none;
+            color: black;
+            border: 1px solid cornflowerblue;
+            display: block;
+            width: 100px; height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-family: impact;
+            background-color: cornflowerblue;
+            border-radius: 2em;
+        }
+        ul a:hover{
+            background-color: whitesmoke;
+            border: 1px solid whitesmoke;
+            
+        }
     </style>
 </head>
 <body>
+    <header>
+        <ul>
+            <li><a href="layout2.html">Intro</a></li>
+            <li><a href="layout3.html">Profile</a></li>
+            <li><a href="/#">Main</a></li>
+            <li><a href="/#">Contact</a></li>
+        </ul>
+    </header>
     <section>
 
         <h2>강아지 용품 준비하기</h2>
@@ -65,9 +108,9 @@
                 <p>강아지를 잃어버릴 염려가 있으니 산책할 무렵이 되면 이름표를 꼭 목에 걸어주도록 하세요. 그리고 방울이 달린 목걸이를 하고자 하실 때는 신중하셔야 합니다. 움직일 때마다 방울이 딸랑 거리면 신경이 예민한 강아지들에게는 좋지 않은 영향을 끼칠 수 있기 때문입니다.</p>
                 </article>
             </div>
-        <footer>
-            <p>boxmodel 연습하기</p>
-        </footer>
+    <footer>
+        <p>boxmodel 연습하기</p>
+    </footer>
         
     </section>
 </body>
