@@ -5,29 +5,94 @@
     <title>bg1.html</title>
     <style>
         body{
-            background: url("p1.jpeg") no-repeat fixed;
+            /*background: url("p1.jpeg") no-repeat ;*/
             background-size: cover;
-            background-position: center;
+            background-position: left top;
             /* repeat-x : X축으로 반복
              repeat-y : y축으로 반복 
              no-repeat : 작은 크기의 사진 반복 X 대신 꽉 채워지지 X*/
             /* background-position: Y(수평)px X(수직)px에서부터 px만큼 떨어짐*/
             /*아무내용을 작성하지 않은 상태로 ceenter로 하게된다면 
             맨위의 위치 기준에 센터값으로 설정된다. 이때 background에서 fixed를 설정해주면
-            내가 보고있는 위치 기준에서 정가운데로 배치된다.(또는 background-attachment: fixed;)*/
+            내가 보고있는 위치 기준에서 정가운데로 배치된다.(또는 background-attachment: fixed;)
+            background: url("p1.jpeg") no-repeat fixed;: 문서의 가운데
+            left top : 왼쪽 위부터 꽉 채움
+            left bottom : 왼쪽 아래부터 꽉 채움
+            background-attachment : scroll, fixed*/
+        }
+        .box1{
+            width: 250px; height: 250px;
+            border: 5px dotted cornflowerblue;
+            padding: 20px;
+            background: url(p1.jpeg) no-repeat;
+            /*background-clip: content-box;*/
+            /*padding-box:padding빼고 색 채워짐
+            content-box : 내용만 색 채워짐;
+            border-box : 테두리까지 색채워짐*/
+            background-origin: border-box;
+            /* background-origin: content-box -> background-clip과는 
+            다르게 사진 사이즈가 작을 경우 반복되며 채워짐
+            background: url(p1.jpeg)에 no-repeat추가해주면 !원본 사이즈!로 채워짐
+            padding-box : padding부터 !원본 사이즈!로 채워짐
+            border-box : 테두리부터 !원본 사이즈!로 채워짐*/
+        }
+        .box2{
+            width: 250px; height: 250px;
+            border: 1px solid crimson;
+            padding: 20px;
+            background: url('market.jpg') no-repeat;
+            background-size: 50%;
+            /*background-size: contain -> 사이즈 다 담고 여러번 반복(잘리는부분 X)
+            background-size: cover -> 잘리지만 다 채워줌
+            background-size: 100% 100% -> 안잘리고 다채워지지만 비율이 이상하게 됨
+            background-size: auto -> 원본 이미지 왼쪽위부터 채워짐(잘릴 수 있음)*/
+        }
+        .box3{
+            width: 250px; height: 250px;
+            border: 1px solid crimson;
+            background: repeating-linear-gradient(black, black 4px,gray 4px,gray 12px ,white 12px, white 20px);
+            /* background: linear-gradient(to right top, cornflowerblue 20%, white 30%, pink 50%); */
+            /*선형 그라데이션 : background: linear-gradient(방향, 색 퍼센트(지점을 의미함, 비율이 아니라), 색);
+            설정한 픽셀만큼의 높이로 반복되는 선형 그라데이션 : background: repeating-linear-gradient(red, pink 20px);
+            그라데이션이 아닌 얼룩말 무늬 반복 background: repeating-linear-gradient(black, black 10px,white 10px, white 20px);
+            한 칸의 두께를 원하는 만큼의 두께를 각각 색상에 추가해야함*/
+        }
+        .box4{
+            width: 250px; height: 200px;
+            border: 1px solid crimson;
+            /* background: radial-gradient(circle closest-corner at 20% 20%, navy ,whitesmoke, cornflowerblue); */
+            background: repeating-radial-gradient( circle,whitesmoke, whitesmoke 20px, cornflowerblue 20px, cornflowerblue 40px, navy 40px, navy 60px);
+            /*radial-gradient : 원형 그라데이션
+            background: radial-gradient(circle, navy ,whitesmoke, cornflowerblue)
+            circle : 원을 그려줌 (정사각형에서는 자동으로 원, 직사각형에서는 타원이 기본)
+            circle at % % : 여기서부터 원의 색깔을 그려나가겠다.
+            circle closest-side at % % : 시작점으로부터 가장 가까운 면에 닿을때까지 원을 그림
+            circle farthest-side at % % : 시작점으로부터 가장 먼 면에 닿을때까지 원을 그림
+            circle closest-corner at % % : 시작점으로부터 가장 가까운 코너에 닿을때까지 원을 그림
+            circle farthest-corner at % % : 시작점으로부터 가장 먼 코너에 닿을때까지 원을 그림*/
+        }
+        .box5{
+            width: 200px; height:200px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 20% 20%,white, cornflowerblue);
+            /* margin: 200px auto; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 8px 2px 10px gray;
+            text-align: center;
+            line-height: 200px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <pre>
-
-
-
-
-
-
-        
-    </pre>
-    
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+    <div class="box5">MOONLIGHT</div>
 </body>
 </html>
