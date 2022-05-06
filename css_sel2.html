@@ -4,28 +4,57 @@
     <meta charset="UTF-8">
     <title>css_sel2</title>
     <style>
-        .box1{
+      body{
+        font-family: 'OTWelcomeRA';
+      }
+      .box1{
         width: 400px; height: 250px;
-        border: 1px solid crimson;
+        border: 1px solid black;
         border-radius: 2em;
         padding: 10px;
         margin: 50px auto;
-    }
-    ul{padding: 0;
-    display: flex;
-    justify-content: center
-    ;}
-    ul li{
+      }
+      .navi ul {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+      }
+      .navi ul li{
+        list-style: none;
         float: left;
-        list-style-type: none;
         padding: 0px 20px;
-    }
-    .navi{
-        width: 800px;
-        margin: 10px auto;
-        padding: 20px;
-        border-bottom: 1px solid burlywood;
-    }
+      }
+      .navi ul a:link, .navi ul a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      .navi ul a:hover{
+        border-radius: 2em;
+        padding: 10px 20px;
+        color: whitesmoke;
+        background-color: black;
+      }
+      .navi{
+          width: 800px;
+          margin: 10px auto;
+          padding: 20px;
+          border-bottom: 2px solid black;
+      }
+      #info:target {
+        background:rgba(220, 20, 60, 0.361);
+        color: black;
+        border-color: crimson;
+      }
+      #room:target {
+        background:rgba(255, 166, 0, 0.574);
+        color: black;
+        border-color: orange;
+      }
+      #resv:target {
+        background:rgba(255, 255, 0, 0.556);
+        color: black;
+        border-color: yellow;
+      }
     </style>
 </head>
 <body>
@@ -33,19 +62,19 @@
     
           <ul>
     
-            <li><a href="#">이용 안내</a></li>
+            <li><a href="css_sel2.html#info">이용 안내</a></li>
     
-            <li><a href="#">객실 소개</a></li>
+            <li><a href="css_sel2.html#room">객실 소개</a></li>
     
-            <li><a href="#">예약 방법 및 요금</a></li>
+            <li><a href="css_sel2.html#resv">예약 방법 및 요금</a></li>
     
-            <li><a href="#">예약하기</a></li>
+            <li><a href="rev.html">예약하기</a></li>
     
           </ul>
     
         </nav>  
     
-        <div class="box1">
+        <div class="box1" id="info">
     
           <h2>이용 안내</h2>
     
@@ -53,7 +82,7 @@
     
         </div>
     
-        <div class="box1">
+        <div class="box1" id="room">
     
           <h2>객실 소개</h2>
     
@@ -61,7 +90,7 @@
     
         </div>
     
-        <div class="box1">
+        <div class="box1" id="resv">
     
           <h2>예약 방법 및 요금</h2>
     

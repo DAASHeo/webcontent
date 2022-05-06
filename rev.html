@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예약페이지</title>
+    <style>
+      @font-face {
+          font-family: 'OTWelcomeRA';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+          font-weight: normal;
+          font-style: normal;
+      }
+      body{
+        font-family: 'OTWelcomeRA';
+      }
+      .box1{
+        width: 400px; height: 250px;
+        border: 1px solid black;
+        border-radius: 2em;
+        padding: 10px;
+        margin: 50px auto;
+      }
+       .navi ul {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+      }
+      .navi ul li{
+        list-style: none;
+        float: left;
+        padding: 0px 20px;
+      }
+      .navi ul a:link, .navi ul a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      .navi ul a:hover{
+        border-radius: 2em;
+        padding: 10px 20px;
+        color: whitesmoke;
+        background-color: black;
+      }
+      .navi{
+          width: 800px;
+          margin: 10px auto;
+          padding: 20px;
+          border-bottom: 2px solid black;
+      }
+      #signup{
+        width: 400px;
+        margin: 10px auto;
+      }
+      legend{
+        width: 80px;
+        border-radius: 2em;
+        border: 1.2px dotted black;
+        padding: 10px 20px;
+        background-color: white;
+      }
+      fieldset{
+        width: 400px;
+        height: 150px;
+        font-size: 20px;
+        font-family: 'OTWelcomeRA';
+        margin: 20px 0px;
+        border-radius: 1em;
+        border: none;
+        background-color: cornflowerblue;
+      }
+      fieldset ul li {
+        list-style: none;
+      }
+      #signup button{
+        width: 120px;
+        margin: 5px auto;
+        display: block;
+      }
+      #signup button:hover {
+        background-color: cornflowerblue;
+        color: white;
+      }
+      #signup input:checked + label{
+        color: black;
+        font-weight: bold;
+      }
+      /* #ch :nth-child(2n){
+        color: blue;
+      } */
+      #ch p:nth-of-type(odd){
+        color: red;
+      }
+      #ch h3:first-of-type{
+        background-color: cornflowerblue;
+      }
+      #ch p:last-of-type{
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+  <nav class="navi">
+    
+    <ul>
+
+      <li><a href="css_sel2.html#info">이용 안내</a></li>
+
+      <li><a href="css_sel2.html#room">객실 소개</a></li>
+
+      <li><a href="css_sel2.html#resv">예약 방법 및 요금</a></li>
+
+      <li><a href="rev.html">예약하기</a></li>
+
+    </ul>
+
+  </nav>  
+
+    <form id="signup">    
+        <fieldset>
+          <legend>개인 정보</legend>
+          <ul>
+            <li>
+              <label for="fullname">이름</label>
+              <input id="fullname" name="fullname" type="text" required>
+            </li>
+            <li>
+              <label for="tel">연락처</label>
+              <input id="tel" name="tel" type="tel">
+            </li>          
+          </ul>
+        </fieldset>
+  
+        <fieldset>  
+          <legend>객실 형태</legend>
+          <ul>
+            <li>
+              <input type="radio" name="room" id="basic">
+              <label for="basic">기본형(최대 2인)</label>
+            </li>      
+            <li>
+              <input type="radio" name="room" id="family">
+              <label for="family">가족형(최대 8인)</label>
+            </li>          
+          </ul>
+        </fieldset>
+  
+        <button type="submit"> 제출 </button> 
+  
+      </form>
+      <div id="ch">
+        <p>테스트1</p>
+        <p>테스트2</p>
+        <h3>테스트3</h3>
+        <p>테스트4</p>
+        <h3>테스트5</h3>
+        <p>테스트6</p>
+      </div>
+</body>
+</html>
