@@ -10,8 +10,11 @@
           font-weight: normal;
           font-style: normal;
       }
-      body{
+      form{
         font-family: 'OTWelcomeRA';
+      }
+      body{
+        overflow: scroll;
       }
       .box1{
         width: 400px; height: 250px;
@@ -83,10 +86,15 @@
         color: black;
         font-weight: bold;
       }
+      #signup fieldset:first-of-type label{
+        width: 100px;
+        float: left;
+      }
       /* #ch :nth-child(2n){
         color: blue;
       } */
-      #ch p:nth-of-type(odd){
+      #ch p:nth-of-type(odd)::before {
+        content: "New";
         color: red;
       }
       #ch h3:first-of-type{
@@ -94,6 +102,30 @@
       }
       #ch p:last-of-type{
         font-weight: bold;
+      }
+      #ch h3:first-of-type{
+        background-color: pink;
+      }
+      #ch p:last-of-type em{
+        background-color: pink;
+      }
+      .popup{
+        width: 70px;
+        height: 70px;
+        background-color: cornflowerblue;
+        border-radius: 50%;
+        padding: 10px;
+        position: fixed;
+        top: 70%;
+        right: 5%;
+        line-height: 80px;
+        text-align: center;
+        font-family: 'OTWelcomeRA';
+        font-weight: bold;
+      }
+      .popup a, a:visited{
+        text-decoration: none;
+        color: black;
       }
     </style>
 </head>
@@ -146,13 +178,16 @@
         <button type="submit"> 제출 </button> 
   
       </form>
+      
+      <div class="popup"><a href="index.html">Index ></a></div>
+
       <div id="ch">
         <p>테스트1</p>
         <p>테스트2</p>
         <h3>테스트3</h3>
         <p>테스트4</p>
         <h3>테스트5</h3>
-        <p>테스트6</p>
+        <p>테스트6<em>강조</em></p>
       </div>
 </body>
 </html>
