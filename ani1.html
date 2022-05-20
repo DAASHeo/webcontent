@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ani1</title>
+    <style>
+        .box1{
+            width: 150px;
+            height: 150px;
+            border: 1px solid transparent;
+            background: yellowgreen;
+            margin-bottom: 20px;
+            animation: shape1 2s 2s infinite alternate-reverse;
+            /*animation: name duration timing-function delay 
+            iteration-count direction fill-mode;*/
+        }
+        .box2{
+            width: 150px;
+            height: 150px;
+            border: 1px solid darkblue;
+            background: pink;
+            margin-bottom: 20px;
+            animation: shape2 2s infinite alternate ease-in-out,
+            bg1 2s infinite;
+            /*animation: name duration timing-function delay 
+            iteration-count direction fill-mode;*/
+        }
+        @keyframes shape1 {
+            50%{border: 1px solid black;}
+            to {border-radius: 50%;
+            background: cornflowerblue;}   
+        }
+        @keyframes shape2 {
+            from {transform:perspective(120px) rotatex(0deg) rotatey(0deg);}
+            50% {transform: perspective(120px) rotatex(-180deg) rotatey(0deg);}
+            to{transform: perspective(120px) rotatex(-180deg) rotatey(-180deg);}
+        }
+        @keyframes bg1 {
+            from{background: pink;}
+            50%{background: blue;}
+            to{background: green;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    
+</body>
+</html>

@@ -40,31 +40,78 @@
         }
         #cont1 li:hover .box1{
             transform: translatey(-250px);
-            transition: 0.7s all;
+            transition: 0.7s 0.5s all; /*3초 있다가 0.7의 속도로 나타남*/
             opacity: 1;
         }
+
+        .navi ul {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+      }
+      .navi ul li{
+        list-style: none;
+        float: left;
+        padding: 0px 20px;
+      }
+      .navi ul a:link, .navi ul a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      .navi ul a:hover{
+        border-radius: 2em;
+        padding: 10px 20px;
+        color: whitesmoke;
+        background-color: black;
+      }
+      .navi{
+          width: 800px;
+          margin: 10px auto;
+          padding: 20px;
+          border-bottom: 2px solid black;
+      }
     </style>
 </head>
 <body>
+    <nav class="navi">
+    
+        <ul>
+    
+          <li><a href="css_sel2.html#info">이용 안내</a></li>
+    
+          <li><a href="css_sel2.html#room">객실 소개</a></li>
+    
+          <li><a href="css_sel2.html#resv">예약 방법 및 요금</a></li>
+    
+          <li><a href="rev.html">예약하기</a></li>
+    
+          <li><a href="intro1.html">intro1</a></li>
+    
+        </ul>
+    
+      </nav>  
     <div id="cont1">
         <h2>Activities</h2>
         <ul>
             <li>
-                <img src="42.png" class="img1">
+                <a href="https://42seoul.kr" target="_blank">
+                <img src="42.png" class="img1"></a>
                 <div class="box1">
                     <p>42서울</p>
                     <p>출처 : 인터넷</p>
                 </div>
             </li>
             <li>
-                <img src="lion.png" class="img1">
+                <a href="https://www.codelion.net" target="_blank">
+                <img src="lion.png" class="img1"></a>
                 <div class="box1">
                     <p>멋사</p>
                     <p>출처 : 인터넷</p>
                 </div>
             </li>
             <li>
-                <img src="mod.png" class="img1">
+                <a href="https://mod.nexon.com" target="_blank">
+                <img src="mod.png" class="img1"></a>
                 <div class="box1">
                     <p>mod</p>
                     <p>출처 : 인터넷</p>
@@ -73,21 +120,24 @@
         </ul>
         <ul>
             <li>
-                <img src="42.png" class="img1">
+                <a href="https://42seoul.kr" target="_blank">
+                <img src="42.png" class="img1"></a>
                 <div class="box1">
                     <p>42서울</p>
                     <p>출처 : 인터넷</p>
                 </div>
             </li>
             <li>
-                <img src="lion.png" class="img1">
+                <a href="https://www.codelion.net" target="_blank">
+                <img src="lion.png" class="img1"></a>
                 <div class="box1">
                     <p>멋사</p>
                     <p>출처 : 인터넷</p>
                 </div>
             </li>
             <li>
-                <img src="mod.png" class="img1">
+                <a href="https://mod.nexon.com" target="_blank">
+                <img src="mod.png" class="img1"></a>
                 <div class="box1">
                     <p>mod</p>
                     <p>출처 : 인터넷</p>
