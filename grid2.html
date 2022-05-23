@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid2.html</title>
+    <style>
+        #wrap1{
+            width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            grid-template-areas: 
+            "area1 area1 area1"
+            "area2 area3 area3"
+            "area2 . area4";
+        }
+        .box1{
+            background: cornflowerblue;
+            grid-area: area1;
+        }
+        .box2{
+            background: coral;
+            grid-area: area2;
+        }
+        .box3{
+            background: violet;
+            grid-area: area3;
+        }
+        .box4{
+            background: yellowgreen;
+            grid-area: area4;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+</html>
