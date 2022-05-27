@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="head1">자바스크립트</div>
+    <div id="name1">이름입력</div>
+    <div id="age1">생년월일</div>
+    <script>
+        var heading = document.querySelector('#head1')
+        heading.onclick=function()
+        {
+            heading.style.color="white";
+            heading.style.background="orange";
+        }
+        name1.onclick=function(){
+            var name1 = prompt("이름을 입력하세요", "이DS");
+            // alert(name1 + "님 환영합니다")
+        //     document.write("<b style='color:blue;background:pink;'>" + name1 + "</b>님 환영합니다")
+        // confirm("테스트중입니다");
+        // console.log(name1 + "환영합니다!")
+        
+            /*
+            if(name1 == ""){
+                alert("다시 입력하세요.")
+            }
+            else if(name1 == null){
+                alert("취소하셨습니다.")
+            }
+            else{
+                alert(name1 + "님 환영합니다")
+            }*/
+
+            /*if(name1 !== null)
+            {
+                if(name1 !== "") alert(name1 + "님 환영!");
+                else alert("다시 입력하세요")
+            }
+            else alert("취소하셨습니다")*/
+
+            if(name1 != null && name1 != "") alert(name1 + "님 환영!")
+            else if(name1 == "") alert("다시 입력")
+            else alert("취소하셨습니다.")
+        }
+        age1.onclick=function(){
+            var age1 = prompt("생년을 입력하세요(예:2000)")
+            age2 =2022 - age1 + 1;
+            alert(age1 + "년 생은" + age2 + "세 입니다.")
+        }
+    </script>
+    <!--<script src="a1.js"></script>-->
+</body>
+</html>
