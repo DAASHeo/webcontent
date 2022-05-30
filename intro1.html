@@ -40,7 +40,15 @@
             opacity: 0;
             z-index: 10;
             top: 250px;
+            animation: shape1 2s infinite alternate ease-in-out,
+            bg1 2s infinite;
         }
+        @keyframes shape1 {
+            50%{border: 1px solid black;}
+            to {border-radius: 50%;
+            background: cornflowerblue;}   
+        }
+
         #cont1 li:hover .box1{
             transform: translatey(-250px);
             transition: 0.7s 0.5s all; /*3초 있다가 0.7의 속도로 나타남*/
@@ -55,11 +63,13 @@
       .navi ul li{
         list-style: none;
         float: left;
-        padding: 0px 20px;
+        /* padding: 0px 20px; */
+        padding: 10px 20px;
       }
       .navi ul a:link, .navi ul a:visited {
         color: black;
         text-decoration: none;
+        padding: 10px 20px;
       }
       .navi ul a:hover{
         border-radius: 2em;
@@ -80,15 +90,15 @@
     
         <ul>
     
-          <li><a href="css_sel2.html#info" target="_blank">이용 안내</a></li>
-    
-          <li><a href="css_sel2.html#room" target="_blank">객실 소개</a></li>
-    
-          <li><a href="css_sel2.html#resv" target="_blank">예약 방법 및 요금</a></li>
-    
-          <li><a href="rev.html" target="_blank">예약하기</a></li>
-    
-          <li><a href="intro1.html" target="_blank">Product</a></li>
+            <li><a href="css_sel2.html#info">이용 안내</a></li>
+
+            <li><a href="css_sel2.html#room">객실 소개</a></li>
+      
+            <li><a href="css_sel2.html#resv">예약 방법 및 요금</a></li>
+      
+            <li><a href="rev.html">예약하기</a></li>
+      
+            <li><a href="intro1.html">Product</a></li>
     
         </ul>
     

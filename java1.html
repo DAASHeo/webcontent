@@ -5,12 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
     <div id="head1">자바스크립트</div>
     <div id="name1">이름입력</div>
     <div id="age1">생년월일</div>
     <div id="color1">색상</div>
+    <div id="color2">색상2</div>
+    <button onclick="ch_color()">색상 변경3</button>
+    <p></p>
+    <span id="ch_text1">색상 변경할 텍스트</span>
     <script>
         var heading = document.querySelector('#head1')
         heading.onclick=function()
@@ -51,6 +61,57 @@
             var age1 = prompt("생년을 입력하세요(예:2000)")
             age2 =2022 - age1 + 1;
             alert(age1 + "년 생은" + age2 + "세 입니다.")
+        }
+        color1.onclick = function() {
+            var sel = prompt("색상선택 1:red 2:blue 3:green");
+            switch(sel){
+                case "1":document.write("<p style='color:red'>RED</p>");
+                    break;
+                case "2":document.write("<p style='color:blue'>BLUE</p>");
+                    break;
+                case "3":document.write("<p style='color:green'>GREEN</p>");
+                    break;
+                default : document.write("<p>다시 선택하세요</p>");
+                    break;
+            }
+        }
+        color2.onclick = function() {
+            var sel = prompt("색상선택 1:red 2:blue 3:green");
+            switch(sel){
+                case "1":
+                    ch_text1.style.background='red';
+                    ch_text1.style.color='white';
+                    break;
+                case "2": 
+                    ch_text1.style.background='blue';
+                    ch_text1.style.color='white';
+                    break;
+                case "3": 
+                    ch_text1.style.background='green';
+                    ch_text1.style.color='white';
+                    break;
+                default : alert("다시 선택하세요.");
+                    break;
+            }
+        }
+        function ch_color() {
+            var sel = prompt("색상선택 1:red 2:blue 3:green");
+            switch(sel){
+                case "1":
+                    ch_text1.style.background='red';
+                    ch_text1.style.color='white';
+                    break;
+                case "2": 
+                    ch_text1.style.background='blue';
+                    ch_text1.style.color='white';
+                    break;
+                case "3": 
+                    ch_text1.style.background='green';
+                    ch_text1.style.color='white';
+                    break;
+                default : alert("다시 선택하세요.");
+                    break;
+            }
         }
     </script>
     <!--<script src="a1.js"></script>-->
