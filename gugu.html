@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            border: 1px solid sandybrown;
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+        }
+        h4{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+            var i,j;
+            var mul;
+            for (i = 2; i <= 9;  i++){
+                document.write("<div class=box1>");
+                document.write("<h4>" + i + "단</h4>");
+                for(j = 1; j <= 9; j++){
+                    mul = i * j;
+                    document.write( i + "x" + j + "=" + mul + "<br>");
+                }
+                document.write("</div>");
+            }
+            document.write("<br>");
+            var i = 2; j, mul;
+            while(i <= 9){
+                document.write("<div class=box1>");
+                document.write("<h4>" + i + "단</h4>");
+                for(j = 1; j <= 9; j++){
+                    mul = i * j;
+                    document.write( i + "x" + j + "=" + mul + "<br>");
+                }
+                document.write("</div>");
+                i++;
+            }
+    </script>
+</body>
+</html>
