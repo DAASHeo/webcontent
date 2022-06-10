@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{text-align: center;}
+        button{ 
+            width: 120px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            margin: 30px 15px;
+        }
+        #result{
+            width: 600px;
+            height: 400px;
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 20px auto;
+            transition: all 2s ease-in;
+            /* animation: ch_bg 4s infinite; */
+            background: url('mod.png') ;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        @keyframes ch_bg {
+            from {opacity: 0;}
+            50% {opacity: 1;}
+            to {opacity: 0;}
+        }
+        .bt1{ 
+            background: coral;
+        }
+        .bt2{ 
+            background: green;
+        }
+        .bt3{ 
+            background: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <button class="bt1" onclick="ch_color('orange')">orange</button>
+    <button class="bt2" onclick="ch_color('green')">green</button>
+    <button class="bt3" onclick="ch_color('cornflowerblue')">skyblue</button>
+    <button onclick="ch_img('p1.jpeg')">사진1</button>
+    <button onclick="ch_img('market.jpg')">사진2</button>
+    <div id="result"></div>
+    <!-- <div class="result"></div> -->
+    <script>
+        function ch_color(color1){
+            result.style.background = color1; 
+            // var result1 = document.querySelector('.result')
+            // result1.style.background = "orange"; /* result가 클래스일 경우*/
+            /*result가 ID일 경우 사용가능. 클래스느 불가*/
+        }
+        function ch_img(img1){
+            result.style.background="url('"+img1+"')"
+            result.style.backgroundRepeat="no-repeat"
+            result.style.backgroundSize="cover"
+            result.style.backgroundPosition="50% 50%"
+        }
+    </script>
+</body>
+</html>
