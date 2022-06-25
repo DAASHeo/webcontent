@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function setCookie(name, value, expiredays) { 
+         var todayDate = new Date(); 
+         todayDate.setDate(todayDate.getDate() + expiredays); 
+         document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";" 
+        } 
+        function closeWin() { 
+         if (document.forms[0].notice.checked) 
+          setCookie("notice", "done", 1); 
+         self.close(); 
+        } 
+       </script>
+    허은의 포트폴리오 페이지입니다.
+    <form>
+        <input type="checkbox" name="notice" value="close" onclick="closeWin()">하루 동안 안 볼래요
+        
+       </form>
+</body>
+</html>

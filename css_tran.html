@@ -64,13 +64,15 @@
             border: 1px solid black;
             background-color: bisque;
             margin-top: 20px;
+            transition: all;
         }
         .box3:hover{
-            transition: 2s; /*transition: all - 하위내용으로 다 바뀜*/
+            transition-duration: 2s;
+             /*transition: all - 하위내용으로 다 바뀜*/
             border-radius: 50%;
-            transition-property: background, width;
             background: cornflowerblue;
-            width: 200px;
+            transition-timing-function:ease;
+            /* width: 200px; */
         }
     </style>
 </head>

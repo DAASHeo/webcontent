@@ -5,142 +5,276 @@
     <title>Document</title>
     <!-- <link href="style.css"> -->
     <style>
-        table{border: 1px solid black;/*테두리1줄로*/
-                border-collapse: collapse;}
-        th {border: 1px solid black;
-            padding: 0px;/*여백없애기*/}
-        img{vertical-align: bottom;}/**이미지하단여백정리*/
-        a,a:visited{
-            color: hotpink;
-            text-decoration: none;
-            font-size: 20px;
-            font-family:휴먼모음T;}
-        a:hover{
-            color: blue;
-            text-decoration: underline;
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
-        header ul{
-            list-style-type: none;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            padding: 0%; /*ul은 항상 패딩값 40이 잡혀있음 그러므로 초기화*/
-            }
-        header ul li {
+        @font-face {
+            font-family: 'GmarketSansBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        header{background-color: pink;}
+        header h2 {
             float: left;
-            /* display: inline-block; */
-            margin: 5px;
+            margin: 0px;
+            margin-top: 7px;
+            margin-left: 20px;
+            font-family: 'GmarketSansBold';
         }
-        header ul a:link, a:visited{
-            text-decoration: none;
-            color: black;
-            border: 1px solid cornflowerblue;
+        ul {
+            font-family: 'GmarketSansMedium';
+            list-style: none;
+            float: right;
+            } 
+        ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        li a:hover{
+            color: brown;
+        }
+
+        header:after {
+            content: '';
             display: block;
-            width: 100px; height: 30px;
-            text-align: center;
-            line-height: 30px;
-            font-family: impact;
-            background-color: cornflowerblue;
-            border-radius: 2em;
+            clear: both;
+            }
+        a{
+            color: black;
+            text-decoration: none;
         }
-        header ul a:hover{
-            background: radial-gradient(circle closest-corner at 20px 10px, white, cornflowerblue);
+
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            }
+        header {
+            background-color: whitesmoke;
+            }
+
+        .main {
+            background-color: yellow;
+            height: 100vh;
+            margin-bottom: 18px;
             
+            }
+
+        /*layout*/
+        /* .layout1, .layout2 {
+            width: 50%;
+            height: 100%;
+            } */
+        /* .layout1 {
+            background-color: skyblue;
+            float: left;
+            } */
+
+        /* .layout2 {
+            background-color: pink;
+            float: right;
+            } */
+
+        /* .main:after {
+            content: '';
+            display: block;
+            clear: both;
+            } */
+
+        .footer {
+            background-color: #f5f5f5;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 13px;
+            color: #949497;
+            }
+        .section{
+            width: 300vw;
+            transition: transform 0.5s ;
+        }
+        .inner1{
+            width: 100vw;
+            float: left;
+        }
+        .inner1 img{
+            width: 100%;
+            position : relative;
+        }
+        button{
+            width: 10vw;
+            height: 5vh;
+        }
+        #btn1{
+            position: absolute;
+            top: 80px;
+            left : 30px; 
+        }
+        .introduce {
+            margin: 5%;
+            margin-bottom: 10%;
+        }
+        .aboutme_wrapper {
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            width: 33.3333%;
+            display: flex;
+            justify-content: center;
+        }
+        .aboutme_base {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        -webkit-box-pack: justify;
+        }
+        .aboutme_wrapper {
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+        width: 33.3333%;
+        display: flex;
+        }
+        .icon-text {
+        font-size: 50px;
+        font-weight: bold;
+        color: #282828;
+        display: flex;
+        flex-flow: row nowrap;
+        max-width: 14rem;
+        margin: 0% 4% 0% 0%;
+        opacity: 0.8;
+        }
+
+        .category-text {
+        font-size: 25px;
+        font-weight: bold;
+        color: #282828;
+        margin-bottom: 0.5rem;
+        }
+
+        .detail-text {
+        font-size: 17px;
         }
     </style>
 </head>
 <body>
     <header>
-        <ul>
-            <li><a href="layout2.html" target="_blank">layout2</a></li>
-            <li><a href="layout3.html" target="_blank">layout3</a></li>
-            <li><a href="css_sel2.html" target="_blank">reservation</a></li>
-            <li><a href="intro1.html" target="_blank">Product</a></li>
-        </ul>
+        <h2><a href="index.html"> Heo Eun</a></h2>
+        <nav>
+            <ul>
+                <li><a href="gugu.html" target="_blank">gugudan</a></li>
+                <li><a href="java5.html" target="_blank">java5</a></li>
+                <li><a href="java2.html" target="_blank">java2</a></li>
+                <li><a href="intro1.html" target="_blank">Product</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <a href="http://www.ds.ac.kr" target="_blank">덕성여대</a>
-    <a href="http://www.naver.com" target="_blank">네이버</a>
-    <a href="http://www.daum.net" target="_blank">다음넷</a>
+        <div class="banner">
+            <div style="overflow : hidden">
+                <div class='banner-container'>
+                    <div id="close1">
+                    <div class="inner1"><img src="duksung.png" onclick="alert('프론트엔드 개발로 참여(메인화면 담당)')"></div>
+                    </div>
+                    <div class="inner2"><img src="pillgood.png" onclick="alert('제작예정')"></div>
+                </div>
+            </div>
+        </div>
+        <!-- <button class="btn1">page 1</button>
+        <button class="btn2">page 2</button> -->
+        <section class="introduce">
+            <h2>Introduce</h2>
+            <div class="aboutme_base">
+                <div class="aboutme_wrapper">
+                    <div class="icon-text">🙍</div>
+                    <div class="info_wrapper">
+                        <div class="category-text">이름</div>
+                        <div class="detail-text">허 은</div>
+                    </div>
+                </div>
+                
+                    <div class="aboutme_wrapper">
+                        <div class="icon-text">🎉</div>
+                        <div class="info_wrapper">
+                            <div class="category-text">생일</div>
+                            <div class="detail-text">07.19</div>
+                        </div>
+                    </div>
+                    <div class="aboutme_wrapper">
+                        <div class="icon-text">✅</div>
+                        <div class="info_wrapper">
+                            <div class="category-text">MBTI</div>
+                            <div class="detail-text">ESTJ</div>
+                        </div>
+                    </div>
+                    <div class="aboutme_wrapper">
+                        <div class="icon-text">💻</div>
+                        <div class="info_wrapper">
+                            <div class="category-text">희망직군</div>
+                            <div class="detail-text">프론트엔드</div>
+                        </div>
+                    </div>
+                    <div class="aboutme_wrapper">
+                        <div class="icon-text">💌</div>
+                        <div class="info_wrapper">
+                            <div class="category-text">Github</div>
+                            <div class="detail-text">DAASHeo</div>
+                        </div>
+                    </div>
+                    <div class="aboutme_wrapper">
+                        <div class="icon-text">🏙️</div>
+                        <div class="info_wrapper">
+                            <div class="category-text">거주지</div>
+                            <div class="detail-text">대한민국</div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!-- <button class="btn3">page 3</button> -->
+        <!-- <div class="left" onclick="left()"><img src="left.png"></div>
+        <div class="right" onclick="right()"><img src="right.png"></div> -->
+        <div class="footer">
+            <p>Copyright ⓒ 2022 All rights reserved by eheo.</p>
+            <p>Contact : wjsehdtjr719@gmail.com</p>
+        </div>
     
-    <a href=#bott> 아래로 </a>
-    <a name="top"></a><br><br>
+    <script>
+        window.open("popup.html", "a", "width=400, height=300, left=100, top=50");
 
-    <a href="form1.html">폼연습1</a>
-    <a href="form2.html">폼연습2</a>
-    <a href="css_test02.html">css_test02</a><br><br>
-    <h1> My favorite</h1>
-        <ol type="I" start="3">
-            <li>music</li>
-            <li>musical</li>
-            <li>YubDDEok</li>
-            <li>play</li>
-        </ol>
-        
-    <h1>I want...</h1>
-        <ul type="square">
-            <li>music</li>
-            <li>musical</li>
-            <li>YubDDEok</li>
-            <li>play</li>
-        </ul>
-    
-    <dl>
-        <dt>4 Seasons</dt>
-        <dd>봄</dd>
-        <dd>여름</dd>
-        <dd>가을</dd>
-        <dd>겨울</dd>
-    </dl>
+        // var answer = prompt('처음 방문하셨나요?(네/아니오로 대답)');
+        // if (answer=='네'){
+        //     alert("환영합니다!")
+        // }
+        // else{
+        //     alert("오늘도 즐거운 하루 보내세요 :)");
+        // }
+        var i,j;
+            var mul;
+            for (i = 2; i <= 9;  i++){
+                document.write("<div class=box1>");
+                document.write("<h4>" + i + "단</h4>");
+                for(j = 1; j <= 9; j++){
+                    mul = i * j;
+                    document.write( i + "x" + j + "=" + mul + "<br>");
+                }
+                document.write("</div>");
+            }
+            document.write("<br>");
+            var i = 2; j, mul;
+            while(i <= 9){
+                document.write("<div class=box1>");
+                document.write("<h4>" + i + "단</h4>");
+                for(j = 1; j <= 9; j++){
+                    mul = i * j;
+                    document.write( i + "x" + j + "=" + mul + "<br>");
+                }
+                document.write("</div>");
+                i++;
+            }
+    </script>
 
-    <table border="1">
-        <caption>1-9 숫자 테이블</caption>
-        <!-- 1행 -->
-        <!-- <thead> -->
-            <tr>
-                <th width="100" height="100" rowspan="2">1</th>
-                <th width="100" height="100" colspan="2" ><a href="http://www.ds.ac.kr" target="_blank"><img src="flowers.jpg" alt="꽃사진" width="201" height="100"></a></th>
-                <!-- <th width="100" height="100" >3</th> -->
-            </tr>
-        <!-- </thead> -->
-        <!-- <tbody> -->
-            <tr>
-                <!-- 2행 -->
-                <!-- <th width="100" height="100">4</th> -->
-                <th width="100" height="100" ><a href="http://www.ds.ac.kr" target="_blank"><img src="market.jpg" alt="마켓컬리로고" width="100" height="100"></a></th>
-                <th width="100" height="100">6</th>
-            </tr>
-        <!-- </tbody> -->
-        <!-- <tfoot> -->
-            <tr>
-                <!-- 3행 -->
-                <th width="100" height="100">7</th>
-                <th width="100" height="100">8</th>
-                <th width="100" height="100">9</th>
-            </tr>
-        <!-- </tfoot> -->
-    </table>
-    <img src="flowers.jpg" alt="꽃그림" usemap="#sp1">
-    <map name="sp1">
-        <area shape="rect" coords="76,68,148,124" href="http://www.ds.ac.kr" target="_blank">
-        <area shape="rect" coords="0,20,50,60" href="http://www.naver.com" target="_blank">
-    </map><br>
-
-    <p></p>
-    <object data="ptest.pdf" width="400" height="500"></object>
-    <!-- <object data="bgsound.mp3"></object>
-    <object data="fire.mp4" width="300" height="300"></object> -->
-    <p></p>
-    <embed src="ptest.pdf" width="400" height="500">
-    <!-- <embed src="bgsound.mp3">
-    <embed src="fire.mp4">
-
-    <p></p>
-    <audio src="bgsound.mp3" controls autoplay></audio>
-    <p></p>
-    <video src="fire.mp4" controls autoplay muted loop></video> -->
-    
-    <a name="bott">아래입니다</a><br>
-    <a href=#top>처음으로</a>
 </body>
 </html>
